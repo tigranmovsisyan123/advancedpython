@@ -9,10 +9,7 @@ def bisect_position(l:list,n:int):
 
 #2
 def all_sums(num):
-    if num%2==1:
-        return [(i,num-i) for i in range(1,num//2+1)]
-    else: 
-        return [(i,num-i) for i in range(1,num//2)]
+    return [(i,num-i) for i in range(1,num//2+1)]
 
 
 #3
