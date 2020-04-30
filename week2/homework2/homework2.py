@@ -1,11 +1,11 @@
 #1
 def bisect_position(l:list,n:int):
-    for i in range(len(l)):
-        if l[i] >= n:
-            return i
-        if n > max(l):
-            return len(l)
-
+    for i in l:
+        if i <= n:
+            pass
+        else:
+            return l.index(i)
+    return len(l)
 
 #2
 def all_sums(num):
@@ -45,3 +45,16 @@ def heapq(l,a):
         if a > max(l):
             l.append(a)
             return l
+
+#6
+def sort_list(lst,order ="ascending"):
+    for i in range(len(lst)): 
+        min_idx = i 
+        for j in range(i+1, len(lst)): 
+            if lst[min_idx] > lst[j]: 
+                min_idx = j 
+            lst[i], lst[min_idx] = lst[min_idx], lst[i]
+    if order == 'ascending' :
+        return lst
+    elif order == 'descending' :
+        return list(reversed(lst))
